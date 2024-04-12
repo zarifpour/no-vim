@@ -52,8 +52,8 @@ Motions are shortcuts that relocate the cursor within the text, ranging from sim
 - <kbd>G</kbd> - go to the last line
 - <kbd>{</kbd> - go to the beginning of the previous paragraph
 - <kbd>}</kbd> - go to the beginning of the next paragraph
-- <kbd>Ctrl</kbd><kbd>u</kbd> - move half a page up
-- <kbd>Ctrl</kbd><kbd>d</kbd> - move half a page down
+- <kbd>Ctrl-u</kbd> - move half a page up
+- <kbd>Ctrl-d</kbd> - move half a page down
 - <kbd>z</kbd><kbd>z</kbd> - center the line on the screen
 - <kbd>z</kbd><kbd>t</kbd> - move the line to the top of the screen
 - <kbd>z</kbd><kbd>b</kbd> - move the line to the bottom of the screen
@@ -79,3 +79,35 @@ Commands are instructions for performing actions such as editing text, changing 
 - <kbd>F</kbd><kbd>\<char></kbd> - find the previous occurrence of a character
 - <kbd>t</kbd><kbd>\<char></kbd> - till the next occurrence of a character (moves the cursor to one character before the character you want to find)
 - <kbd>T</kbd><kbd>\<char></kbd> - till the previous occurrence of a character (moves the cursor to one character after the character you want to find)
+
+## 🎛️ Modes
+
+### Visual Block Mode
+
+Visual Block Mode is a versatile feature in Vim that allows you to select and manipulate columns of text simultaneously. This mode is incredibly useful for making the same change across multiple lines, adding a structured approach to bulk editing tasks.
+
+#### Key Features of Visual Block Mode
+
+1. **Columnar Text Selection**: By entering Visual Block Mode, you can select text in a columnar fashion rather than by conventional linear selection. This is ideal for editing tables, aligning text, or formatting code blocks.
+
+2. **Uniform Text Insertion/Deletion**: Easily insert or delete text across multiple lines at the exact same position, ensuring uniformity with minimal effort.
+
+3. **Adding Comments or Prefixes**:
+   - **Example**: Quickly prepend multiple lines with comments (e.g., `// TODO:`) to mark areas needing attention.
+   - **How to Use**:
+     - Move the cursor to the beginning of the first line where the comment is needed.
+     - Press <kbd>Ctrl-v</kbd> to enter Visual Block Mode.
+     - Use <kbd>j</kbd> or <kbd>k</kbd> to extend the selection to cover all relevant lines.
+     - Press <kbd>I</kbd> to insert text at the start of each line, type `// TODO: `, and press <kbd>Esc</kbd>. The comment will appear at the beginning of each selected line.
+
+4. **Efficient Text Appending**: Append text at the end of each line in the block selection by selecting the lines in Visual Block Mode, moving the cursor to the end using <kbd>$</kbd>, and pressing <kbd>A</kbd> to append.
+
+5. **Flexible Rectangular Edits**: Perform more complex edits like changing numbers or codes in a structured data block, where line-by-line editing would be cumbersome.
+
+#### Practical Applications
+
+- **Code Refactoring**: Quickly refactor variable names or add syntax to multiple lines of code simultaneously.
+- **Data Formatting**: Align data in rows and columns when preparing reports or configuring settings in configuration files.
+- **Bulk Commenting/Uncommenting**: Toggle comments on multiple lines at once to enable or disable sections of code efficiently.
+
+
